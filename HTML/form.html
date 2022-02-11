@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="request.php" method="dialog">
+        <label for="name">name</label>
+        <input type="text" id="name" name="stu_name">
+        <br><br>
+        <label for="mail">Email</label>
+        <input type="email" id="mail" name="stu_email">
+        <br><br>
+        <label for="phone">Phone number</label>
+        <input type="number" id="phone" name="stu_phone" required >
+        <br><br>
+        <label for="password">password</label>
+        <input type="password" name="stu_password" id="password" required placeholder="enter password">
+        <br><br>
+        <label for="passport">Passport</label>
+        <input type="file" accept="image/*" name="stu_passport" id="passport">
+        <br><br>
+        <label for="years">years</label>
+        <select name="stu_years" id="years">
+            <option value="">choose you year</option>
+            <option value="1">First Year</option>
+            <option value="2">second year</option>
+            <option value="3" selected>Third Year</option>
+        </select>
+        <br><br>
+        <label for="dob">date of birth</label>
+        <input type="date" name="stu_dob" id="dob">
+        <br><br>
+        <label for="">hobbies</label><br>
+        <input type="checkbox" name="reading" id="reading"><label for="reading">reading</label>
+        <input type="checkbox" name="swimming" id="swimming"><label for="swimming">swimming</label>
+        <input type="checkbox" name="tennis" id="tennis"><label for="tennis">tennnis</label>
+        <br><br>
+        <label for="">select gender</label><br>
+        <input type="radio" name="stu_gender" id="male"><label for="male">Male</label>
+        <input type="radio" name="stu_gender" id="female"><label for="female">female</label>
+        <input type="radio" name="stu_gender" id="other"><label for="other">other</label>
+        <br><br>
+        <label for="address">address</label>
+        <textarea name="stu_address" id="address" cols="30" rows="10"></textarea>
+        <br><br>
+        <input type="time" >
+        <input type="datetime-local" >
+        <input type="week" >
+        <br><br>
+        <input type="range" min="0" max="100" value="20">
+        <input type="color">
+        <input type="text" value="this is text">
+        <button type="submit">submmit</button>
+    </form>
+</body>
+</html>
