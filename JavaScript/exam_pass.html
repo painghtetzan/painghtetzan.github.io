@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <h1>Exam results</h1>
+    <form name="myform">
+        <label for="html">Html</label>
+        <input type="number" name="html" id="html" placeholder="enter html mark"><br><br>
+        <label for="javascript">css
+        </label>
+        <input type="number" name="java" id="javascript" placeholder="enter java mark"><br><br>
+        <label for="css">css</label>
+        <input type="number" name="css" id="css" placeholder="enter css mark"><br><br>
+        <button type="button" onclick="result()">Result</button>
+    </form>
+    <script>
+        function result(){
+        let html = document.myform.html.value
+        console.log(html)
+        let java = document.myform.java.value
+        console.log(java)
+        let css = document.myform.css.value
+        if(html>=50 && java>=50 && css>=50 && html>80 || java>80 || css>80  ){
+            document.write("<h1>This student pass with destination</h1>")}
+        else if(html>=50 && java>=50 && css>=50){
+            document.write("<h1> This student pass the exam</h1>")
+        }
+        else{
+            document.write("<h1>this student is fail</h1>")
+        }
+        }
+    </script>
+</body>
+</html>
