@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr = [1,2,3,4,5]
+        console.log(arr)
+        console.log(arr[4])
+        console.log(arr.length)
+        let makeArray = Array(1,2,3,4)
+        console.log(makeArray)
+
+        let array = [1,2,3,4,'a','b','c','d',['z','y','x']]
+        console.log(array)
+        console.log(array.length)
+        console.log(array[8][2])
+        let secArray = [[1,2,3,4,5,],['a','b','c','d'],['z','y','x']]
+        console.log(secArray)
+        console.log(secArray.length)
+        console.log(secArray[2][1])
+        let barray =[]
+        barray[0] = 1
+        barray[1] = 2
+        barray[2] = 3
+        console.log(barray)
+        barray.push(4)
+        console.log(barray)
+        barray.unshift(5)
+        console.log(barray)
+        barray.pop()
+        console.log(barray)
+        console.log(barray.sort())
+        console.log(barray.reverse())
+        let carray = barray.toString()
+        console.log(carray)
+        console.log(typeof(carray))
+        let darray = carray.split(',')
+        console.log(darray)
+        let name = "welcome to bootcamp"
+        console.log(name.split(''))
+        console.log(name.split(' '))
+        let earray = [1,2,3,4,5,]
+        let farray = ['a','b','c']
+        let garray = earray.concat(farray)
+        console.log(garray)
+        harray = [...earray,...farray]
+        console.log(harray)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let secretNum = 5
+        let answ = prompt("guess a number between 1 and 10")
+        while(answ !=secretNum){
+            if(answ>secretNum){
+                alert("yours is higher than secret number ")
+            }else {
+                alert("yours is lower than the secret number")
+            }
+             answ=prompt("guess a number between 1 and 10")
+        }
+        alert("correct")
+    </script>
+</body>
+</html>
