@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter name</label>
+    <input type="text" name="name" id="name" required><br><br>
+    <label for="age">Enter age</label>
+    <input type="number" name="age" id="age" required>
+    <br>
+    <button  onclick="sub()">Submit</button>
+    <table cellpadding="20"  cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <td>NO</td>
+                <td>Name</td>
+                <td>Age</td>
+            </tr>
+        </thead>
+        <tbody id = "tabody">
+            
+        </tbody>
+    </table><br><br>
+    <script>
+        function sub(){
+            let answ_name = document.querySelector("#name").value
+            let answ_age = document.querySelector("#age").value
+            let n = 1
+            let td1 = document.createElement('td')
+            let td2 = document.createElement("td")
+            let td3 = document.createElement('td')
+            let tr = document.createElement('tr')
+            let body = document.querySelector("#tabody")
+            td1.innerText=n++
+            td2.innerText = answ_name
+            td3.innerText = answ_age
+            tr.appendChild(td1)
+            tr.appendChild(td2)
+            tr.appendChild(td3)
+            console.log(tr)
+            body.appendChild(tr)
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <table cellspacing="0" border="1" cellpadding="20">
+            <thead>
+                <tr>
+                    <td>No</td>
+                    <td>Name</td>
+                    <td>Age</td>
+                </tr>
+            </thead>
+            <tbody id = "tabody">
+
+            </tbody>
+        </table><br><br>
+        <button type="button" onclick="clickchange()">show</button>
+    
+    <script>
+        function clickchange(){
+            let data = [
+        {name:"paing",age:19},
+        {name:"htet",age:20},
+        {name:"zan",age:21}]
+            console.log(data)
+            let i = 1
+            let tbody = document.querySelector("#tabody")
+            let myData = ''
+            for(let value of data){
+                myData+= `<tr>
+                    <td>${i++}</td>
+                    <td>${value.name}</td>
+                    <td>${value.age}</td>
+                    </tr>`
+            }
+            console.log(myData)
+        tbody.innerHTML = myData
+        }
+        
+        
+    </script>
+</body>
+</html>

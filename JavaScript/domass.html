@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table cellpadding="20"  cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <td>NO</td>
+                <td>Name</td>
+                <td>Age</td>
+            </tr>
+        </thead>
+        <tbody id = "tabody">
+            <tr></tr>
+        </tbody>
+    </table><br><br>
+    <button type="button" onclick="input()">buttom</button>
+    <script>
+        function input(){
+                let name1 = prompt("enter the name!")
+                let age1 = prompt("enter the age!")
+                let name2 = prompt("enter the name!")
+                let age2 = prompt("enter the age!")
+                let name3 = prompt("enter the name!")
+                let age3 = prompt("enter the age!")
+                let getData = [{name:name1,age:age1},{name:name2,age:age2},{name:name3,age:age3}]
+                let body = document.querySelector("#tabody")
+                let n= 1
+                let myData = ''
+                for (let value of getData){
+                    myData+=`<tr>
+                        <td>${n++}</td>
+                        <td>${value.name}</td>
+                        <td>${value.age}</td>
+                        </tr>`
+                        console.log(myData)
+                body.innerHTML=myData
+                }
+                
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <h1 id = "element" onclick="attribute()" class="heading">Create Element</h1>
+    <!-- <input type="text" name="name" id="name">
+    <button onclick="add()">add</button>
+    <ul id ="ul">
+        <li>apple</li>
+        <li>dell</li> -->
+    </ul>
+    <script>
+        // function add(){
+        //     let name = document.querySelector('#name').value;
+        //     console.log(name)
+        //     let li = document.createElement('li')
+        //     li.innerText=name
+        //     let ul = document.querySelector("#ul")
+        //     ul.appendChild(li)
+        // }
+        function attribute(){
+            let element = document.querySelector('#element')
+            let attri = element.getAttribute('class')
+            console.log(attri)
+            if(attri){
+                element.removeAttribute('class')
+            }else{
+                element.setAttribute('class','heading')
+            }
+        }
+    </script>
+</body>
+</html>

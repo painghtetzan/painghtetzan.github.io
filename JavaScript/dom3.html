@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "title" >css with dom</h1><br><br>
+    <button onclick="clickchange()">click</button><br><br>
+    <img src="../HTML/link/images/imge.png" alt="" width="300" height="300" id="img1"><br><br>
+    <img src="../HTML/link/images/koadk.webp" alt="" width="200" id ="img2" height="200" onmouseover="big()" onmouseout="out()">
+    <script>
+        function clickchange(){
+            document.querySelector('#title').style.color= 'red'
+            document.querySelector('#title').style.backgroundColor = 'orange'
+            let imgee = document.querySelector('#img1')
+            imgee.style.height = '400px'
+            imgee.style.width = '400px'
+        }
+        function big(){
+            let big = document.querySelector("#img2")
+            big.style.width = '250px'
+            big.style.height = '250px'
+        }
+        function out(){
+            let out = document.querySelector("#img2")
+            out.style.width = '200px'
+            out.style.height = '200px'
+        }
+    </script>
+</body>
+</html>

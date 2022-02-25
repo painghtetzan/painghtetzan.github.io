@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 >dom 1</h1>
+    <h3 id = "ig">Language</h3>
+    <p class="lang">Html</p>
+    <p class="lang">Css</p>
+    <p class="lang">Javascript</p>
+    <h3 class = "lang">jquary</h3>
+    <h4 id="add"></h4>
+    <p id = "add1"></p>
+    <button onclick="add()">add</button>
+    <script>
+        let ig = document.getElementById("ig")
+        console.log(ig)
+        let lang = document.getElementsByClassName("lang")
+        console.log(lang)
+        console.log(lang[3])
+        let tag_name = document.getElementsByTagName("p")
+        console.log(tag_name)
+        console.log(tag_name[2])
+        let q_id = document.querySelector("#ig")
+        console.log(q_id)
+        let q_class = document.querySelector('.lang')
+        console.log(q_class)
+        let q_tag = document.querySelector('p')
+        console.log(q_tag)
+        let q_langall = document.querySelectorAll('.lang')
+        console.log(q_langall)
+        let q_tagall = document.querySelectorAll('p')
+        console.log(q_tagall)
+        function add(){
+            let add = document.querySelector("#add")
+            add.innerHTML= "<h1> This is innerHTML</h1>"
+            let add1 = document.querySelector("#add1")
+            add1.innerText = "<h1> This is innerHTML</h1>"
+        }
+        
+        
+    </script>
+</body>
+</html>
