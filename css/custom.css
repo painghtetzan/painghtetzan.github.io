@@ -1,0 +1,72 @@
+body{
+    background-color: antiquewhite;
+}
+form{
+    width: 80%;
+    
+    margin:auto
+}
+h1{
+   text-align: center;
+}
+input[type="text"],input[type="number"] {
+width: 100%;
+outline: none;
+
+}
+input[type="text"]:focus{
+    background-color: aqua;
+    border: 5px solid rebeccapurple;
+    
+}
+input[type="radio"]:checked+label{
+    color: red;
+    letter-spacing: 5px;
+}
+#address{
+    width: 80%;
+    height: 100px;
+    outline: none;
+    border-radius: 7px;
+}
+/* input[type="checkbox"]:enabled+label{
+color: blue;
+} */
+input[type="checkbox"]:checked+label{
+    color: orangered;
+    font-style: italic;
+}
+input[type="checkbox"]:disabled+label{
+color: greenyellow;
+}
+li:first-child{
+    background-color: yellow;
+}
+li:last-child{
+    background-color: black;
+}
+li:nth-child(6){
+    background-color: blueviolet;
+}
+p:empty{
+    background-color: red;
+    width: 100%;
+    height: 20px;
+}
+.thankyou{
+text-align: center;
+}
+.borderone{
+    border: 2px solid red;
+}
+.bordertwo{
+    border-bottom: 2px dotted blue;
+    border-left: 3px solid green;
+}
+.borderthree{
+    border-style: dashed dotted solid;
+}
+.borderfour{
+    border-width: 2px 3px 4px 5px;
+    border-style: solid;
+}

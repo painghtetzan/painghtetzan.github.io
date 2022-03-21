@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        small{
+            color:red
+        }
+        .error{
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="num1">Number 1</label>
+        <input type="number" id="num1" name="num1">
+        <small id="num1_err"></small><br><br>
+        <label for="num2">Number 2</label>
+        <input type="num2" id="num2" name="num2">
+        <small id="num2_err"></small><br><br>
+        <label for="result">Result</label>
+        <input type="number" id="result" name="result" readonly><br><br>
+        <button type="button" onclick="add()">button</button>
+    </form>
+    <script>
+        function formValidation(){
+            let num1_val = document.querySelector('#num1').value;
+            let num2_val = document.querySelector("#num2").value;
+            let num_one = document.querySelector("#num1")
+            let num_two = document.querySelector("#num2")
+            let num1_err = document.querySelector("#num1_err")
+            let num2_err = document.querySelector("#num2_err")
+            if(num1_val =='' || num1_val ==''){
+                num_one.removeAttribute('class')
+                num_two.removeAttribute('class')
+                num1_err.innerHTML=''
+                num2_err.innerHTML=''
+                if(num1_val==''){
+                    showError(num1_err,num_one,"Number 1 is required")
+                }
+                if(num2_val==''){
+                    showError(num2_err,num_two,"number 2 is required")
+                }
+                function showError(numError,numInput,message){
+                    numError.innerHTML= message
+                    numInput.setAttribute('class','error')
+                }
+            }else{
+                num_one.removeAttribute('class')
+                num_two.removeAttribute('class')
+                num1_err.innerHTML=''
+                num2_err.innerHTML=''
+                return{num1_val,num2_val}
+            }
+        }
+        function add(){
+            let numbers = formValidation()
+            console.log(numbers)
+            let result = Number(numbers.num1_val)+ Number(numbers.num2_val)
+            console.log(result)
+            document.querySelector('#result').value=result
+        }
+    </script>
+</body>
+</html>

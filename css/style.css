@@ -1,0 +1,145 @@
+ h1 {
+    color: red;
+    font-size: 50px;
+    text-align: center;
+}
+/*
+small {
+    color: green;
+    line-height: 40px;
+}
+
+a[target="_blank"] {
+    color: green;
+    text-decoration: none;
+}
+#idselector{
+    color: green;
+    word-spacing: 40px;
+    text-indent: 70px;
+    line-height: 30px;
+}
+/* .classone{
+    color: blueviolet;
+    line-height: height 30px; 
+    text-indent: 70px;
+} 
+ .desc a{
+    color: green;
+}
+.child > a{
+    color: red;
+} */
+  a:link{
+    color: red;
+}  */
+a:hover{
+    color: green;
+}
+a:active{
+    color: yellow;
+}
+a:visited{
+    color: deeppink;
+}
+:target{
+    color:red;
+    word-spacing: 30px;
+} */
+.margin1{
+    margin: 50px;
+    border: 2px solid black;
+}
+.padding1{
+    border: 2px solid black;
+    padding: 50px;
+}
+.inline{
+    border: 2px solid black;
+    width: 400px;
+    display: inline-block;
+}
+.block{
+    border: 2px solid black;
+    width: 400px;
+    display: inline-block;
+}
+.float_left img{
+    width: 40%;
+    float: left;
+}
+/* .clear{
+    clear: both;
+} */
+.float_right img{
+    width: 40%;
+    float: right;
+}
+.gridone,.gridfour,.gridthree,.gridtwo,.gridfive,.gridsix {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.gridone div,.gridtwo div,.gridthree div,.gridfour div,.gridfive div,.gridsix div{
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.gridtwo {
+    grid-column-gap: 50px;
+}
+.gridthree{
+    grid-row-gap: 50px;
+}
+.gridfour{
+    grid-gap: 50px;
+}
+.columnadd{
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+.rowadd{
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+.relative_parents{
+    border: 2px red solid;
+    width:1000px;
+    height: 600px;
+    
+}
+.absolute_parents{
+    border: 2px red solid;
+    width: 1000px;
+    height: 1000px;
+}
+.relative{
+    border: 2px solid black;
+    width: 500px;
+    height:400px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+.absolute{
+    border: 2px solid black;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+.fixed{
+    position:fixed;
+    top:50px
+
+}
+.online{
+    font-family: 'Hubballi', cursive;
+}
+@font-face {
+    font-family:a;
+    src: url(Hubballi-Regular.ttf);
+}
+.offline{
+    font-family:a;
+}

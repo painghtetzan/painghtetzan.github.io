@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .heading{
-            color:red
+        small{color: red;}
+        .error{
+            border-color: red;
         }
     </style>
 </head>
+
 <body>
-    <h1 id = "element" onclick="attribute()" class="heading">Create Element</h1>
-    <!-- <input type="text" name="name" id="name">
-    <button onclick="add()">add</button>
-    <ul id ="ul">
-        <li>apple</li>
-        <li>dell</li> -->
-    </ul>
+    <form action="">
+        <label for="num1">Number 1 :</label>
+        <input type="number" id="num1" name="num1">
+        <small id="num1_err"></small><br><br>
+
+        <label for="num2">Number 2 :</label>
+        <input type="number" id="num2" name="num2">
+        <small id="num2_err"></small><br><br>
+
+        <label for="result">Result :</label>
+        <input type="number" id="result" readonly><br><br>
+        <button type="button" onclick="button()">button</button>
+    </form>
     <script>
-        // function add(){
-        //     let name = document.querySelector('#name').value;
-        //     console.log(name)
-        //     let li = document.createElement('li')
-        //     li.innerText=name
-        //     let ul = document.querySelector("#ul")
-        //     ul.appendChild(li)
-        // }
-        function attribute(){
-            let element = document.querySelector('#element')
-            let attri = element.getAttribute('class')
-            console.log(attri)
-            if(attri){
-                element.removeAttribute('class')
-            }else{
-                element.setAttribute('class','heading')
-            }
+        function formValidation() {
+            let num1_val = document.querySelector('#num1').value
+            let num2_val = document.querySelector('#num2').value
+            let num1_sen =document.querySelector('#num1')
+            let num2_sen =document.querySelector('#num2')
+            let num1err =document.querySelector('#num1_err')
+            let num2err = document.querySelector('#num2_err')
+            return{num1_val,num2_val}
+            if (num1 == '' || num2 == '') {
+                if (num1== ''){run(num1_sen,num1err,'Number 1 is required')}
+                
+                if (num2== '') {run(num2_sen,num1err,'Number 2 is required')}
+                function run(numSentense,numerr,message){
+                    numerr.innerHTML=message
+                    numSentense.setAttribute('class','error')
+
+                }
+             }
+         }
+        function button() {
+            let vali = formValidation()
+            console.log(vali)
+            let result = Number(vali.num1_val) + Number(vali.num2_val)
+            console.log(result)
+            document.querySelector('#result').value = result
+
         }
     </script>
 </body>
+
 </html>
